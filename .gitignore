@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pkl
+
+# Virtual environments
+*/venv/
+
+# IDEs
+*/.idea/
+*/.vscode/
+
+# Jupyter
+*/.ipynb_checkpoints/
+*/.virtual_documents/
+
+# macOS
+*/.DS_Store
+
+# Robotics / automation
+*/output/
+*/temp/
+*/.rpa/
+*/work-items-out/
+*/testrun/
+
+# Temporary lock files
+*/.~lock*
+
+# Archives
+*.zip
+
+*/.gitignore

@@ -1,0 +1,6 @@
+{
+    "python.terminal.activateEnvironment": false,
+    "python.analysis.extraPaths": [
+        "/home/prem/Documents/Work/Robots/inhuman-insurance-inc-ais-robot/."
+    ]
+}

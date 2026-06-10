@@ -1,0 +1,6 @@
+tasks:
+  api_beispiel:
+    robotTaskName: Hole Benutzer Daten von API
+
+condaConfigFile: conda.yaml
+artifactsDir: output

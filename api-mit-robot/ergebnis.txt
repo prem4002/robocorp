@@ -1,0 +1,17 @@
+========================================
+API ROBOT - ERGEBNISSE
+========================================
+GET /users/1
+  Name    : Leanne Graham
+  Email   : Sincere@april.biz
+  Stadt   : Gwenborough
+  Firma   : Romaguera-Crona
+----------------------------------------
+GET /posts?userId=1
+  Anzahl Posts    : 3
+  Erster Titel    : sunt aut facere repellat provident
+----------------------------------------
+POST /posts  (201 Created)
+  Gesendeter Titel : Mein RPA Robot Post
+  Neue ID          : 101
+========================================
