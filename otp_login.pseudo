@@ -1,0 +1,55 @@
+import libraries
+msal
+re
+time
+requests
+
+TENANT_ID
+CLIENT_ID
+CLIENT_SECRET
+
+WBSITE
+SCOPE -> /.default # stored in azure
+
+FUNCTION access_token():
+    app = CREATE ConfidentialClientApplication WITH:
+        client_id     = CLIENT_ID
+        authority     = "https://login.microsoftonline.com/" + TENANT_ID
+        client_secret = CLIENT_SECRET
+
+    result = app.acquire_token_for_client(scopes=SCOPE)
+
+    IF result, RETURN
+    ELSE THROW ERROR
+
+FUNCTION get_emails(TOKEN):
+    set headers for graphAPI auth(
+        authorisation
+        content type
+    )
+
+    FILTER emails and store it in variable URL
+    response = requests.get(URL, headers)
+    IF STATUS_CODE 200 RETURN EMAILS
+    ELSE THROW ERROR
+
+FUNCTION get_otp(EMAILS):
+    FIND PATTERN using REGEX
+    RETURN PATTERN
+
+FUNCTION loop_for_otp():
+    TOKEN = access_token()
+    WHILE TIME
+        EMAILS = get_emails(TOKEN)
+        FOR EMAIL in EMAILS:
+            get_otp()
+            IF PATTERN RETURN PATTERN
+            ELSE CONTINUE
+
+FUNTION login():
+    login in WEBSITE
+    WAIT FOR OTP SCREEN
+    loop_for_otp()
+    USE OTP
+        IF WORKS -> NEXT PAGE
+        ELSE RETURN ERROR
