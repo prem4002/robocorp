@@ -7,7 +7,8 @@ requests
 TENANT_ID
 CLIENT_ID
 CLIENT_SECRET
-
+EMAILADS
+GRAPHURL
 WBSITE
 SCOPE -> /.default # stored in azure
 
@@ -28,7 +29,12 @@ FUNCTION get_emails(TOKEN):
         content type
     )
 
-    FILTER emails and store it in variable URL
+    FILTER emails and store it in variable URL with EMAILADS
+        # example
+        # URL = (
+        # f"GRAPHURL/users/EMAILADS/mails"
+        # f"?$top={5}"
+        # )
     response = requests.get(URL, headers)
     IF STATUS_CODE 200 RETURN EMAILS
     ELSE THROW ERROR
