@@ -79,7 +79,7 @@ def rpa_login_flow():
         browser = p.chromium.launch(headless=False)
         page = browser.new_page()
 
-        page.goto("https://dummysite.com/login")
+        page.goto("https://dummmysite.com/login")
         page.wait_for_load_state("networkidle")
 
         page.fill("#username", "username")
@@ -93,8 +93,8 @@ def rpa_login_flow():
         if otp:
             page.fill("#otpInput", otp)
             page.click("#verifyBtn")
-            print("login done!")
+            print("logged In")
         else:
-            print("OTP not received.")
+            print("OTP not received")
 
         browser.close()
